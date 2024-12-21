@@ -10,7 +10,7 @@ const Home = () => {
 
   // Initial data fetch
   useEffect(() => {
-    getAllPosts(1); // Fetch first page on mount
+    getAllPosts(1); 
   }, [getAllPosts]);
 
   // Fetch next page
@@ -34,14 +34,14 @@ const Home = () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <PostCard
-            posts={[item]} // Pass a single post for the UI
+            posts={[item]} 
             setPosts={setPosts}
           />
         )}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
-        onEndReached={fetchMorePosts} // Load more posts when reaching the bottom
+        onEndReached={fetchMorePosts} 
         onEndReachedThreshold={0.5} // Trigger when 50% of the list is visible
       />
       <FooterMenu />

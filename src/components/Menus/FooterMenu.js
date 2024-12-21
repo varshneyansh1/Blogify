@@ -39,7 +39,7 @@ const FooterMenu = () => {
           />
           <Text style={styles.label}>My Post</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Account')}>
           <FontAwesome5
             name="user"
             style={styles.iconStyle}
